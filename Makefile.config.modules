@@ -1,0 +1,20 @@
+################################################################################
+#
+# MAKEFILE MODULE SETTING
+#
+################################################################################
+
+DOXY_MACRO_PREDEFINED=
+DOXY_EXPAND_AS_DEFINED=
+
+#CC_INCLUDE_PATH=/home/build/diagnostics/rel-0.0.0/include
+
+CC_DEBUG_BINARY_DEFINE+= -DLTL2FSM_DEBUG__LEVEL__=0 
+CC_DEBUG_DEBUG_DEFINE+= -DLTL2FSM_DEBUG__LEVEL__=1 
+CC_DEBUG_AUDIT_DEFINE+= -DLTL2FSM_DEBUG__LEVEL__=2 
+
+# LF=-lxxxxbgl-viz
+
+# Local Variables:
+# mode:makefile
+# End:

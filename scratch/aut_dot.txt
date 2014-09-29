@@ -1,0 +1,11 @@
+digraph "(a U Gb)" {
+ratio="compress";
+size="7.27, 10.69";
+
+0 [label="({(a U Gb)},\n {(a U Gb)})", fontname="TimesNewRoman", shape=ellipse];
+1 [label="({Gb}, ø)", fontname="TimesNewRoman", shape=ellipse, peripheries=2];
+
+0 -> 0 [label="a", fontname="TimesNewRoman"];
+0 -> 1 [label="b", fontname="TimesNewRoman"];
+1 -> 1 [label="b", fontname="TimesNewRoman"];
+}				    

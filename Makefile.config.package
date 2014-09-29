@@ -1,0 +1,65 @@
+
+################################################################################
+#
+# BUILD MANAGEMENT
+#
+################################################################################
+
+# BUILD_PATH=$(ENV_LIB_ROOT)/../build
+BUILD_SOURCE=iter-1
+BUILD_TARGET=iter-1
+
+################################################################################
+#
+# PROJECT MANAGEMENT
+#
+################################################################################
+
+LIB_NAME=ltl2fsm
+PROJECT_NAME=ltl2fsm
+PROJECT_INTERFACE_ROOT=ltl2fsm
+
+################################################################################
+#
+# EXTERNAL SOURCES
+#
+################################################################################
+
+# libs which are third party provided
+# LIB_PATH=
+LIBS=-lbgl-viz
+CONFIG_EXTERNAL_LIBS=ace-dynamic
+
+# libs which are built by ourselves 
+CONFIG_OWN_LIBS=diagnostics-static-bin
+
+################################################################################
+#
+# INTENRAL SOURCE
+#
+################################################################################
+
+# DOC_DIR=doc
+
+LIB_INTERFACE_DIR=ltl2fsm
+LIB_SOURCE_DIR=test/scratch # that's a hack -- to silent the makefiles
+# we need some directory for scanning
+
+# EXEC_DIR=executables
+
+# DEPS_DIR=.deps
+
+# DOXY_TAG_FILES=
+
+################################################################################
+#
+# MAKEFILE MODULES
+#
+################################################################################
+
+CONFIG_MODULES=cc link doxy emacstags listing sizes cvs unittest
+
+
+# Local Variables:
+# mode:makefile
+# End:

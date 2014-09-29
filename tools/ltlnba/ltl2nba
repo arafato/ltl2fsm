@@ -1,0 +1,29 @@
+#!/usr/bin/python
+
+from LTLUtils import parse, posNF, mhStateToString, wrapMH
+from EpsiABA import EpsiABA
+from EpsiDelayedSimGame import EpsiDelayedSimGame
+from SimulationRelation import SimulationRelation
+from WAADeSimAlgo_opt import computeSimRel
+import sys
+import os
+
+from ltllib import *
+from neverlib import *
+
+
+if len(sys.argv) < 2:
+    print 'USAGE: ltl2nba <ltl-formula>'
+    sys.exit()
+
+
+formula = sys.argv[1]
+f = posNF(parse(formula))
+A = EpsiABA(f, 3)
+G = EpsiDelayedSimGame(A)
+rel = computeSimRel(G, A.mainStates)
+sim = SimulationRelation(rel)
+NBA = A.toBuechiAutomaton(sim)
+NBA.writeDot(sys.stdout, {}, {'exShape': 'ellipse', 'state2string': \
+                                  mhStateToString, 'wrapFunc': wrapMH})
+    

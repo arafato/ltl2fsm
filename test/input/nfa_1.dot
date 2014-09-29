@@ -1,0 +1,19 @@
+digraph "Test_NFA1" {
+    ratio="compress";
+    size="7.27, 10.69";
+
+    init [label="", shape=plaintext, peripheries=1];
+    0 [label="s1", fontname="TimesNewRoman", shape=ellipse, peripheries=1];
+    1 [label="s2", fontname="TimesNewRoman", shape=ellipse, peripheries=1];
+    2 [label="s3", fontname="TimesNewRoman", shape=ellipse, peripheries=2];
+    3 [label="s4", fontname="TimesNewRoman", shape=ellipse, peripheries=1];
+    4 [label="s5", fontname="TimesNewRoman", shape=ellipse, peripheries=2];
+
+    init -> 0 [label="epsilon"];
+    0 -> 1 [label="tt", fontname="TimesNewRoman"];
+    0 -> 3 [label="tt", fontname="TimesNewRoman"];  
+    1 -> 2 [label="a", fontname="TimesNewRoman"];
+    2 -> 2 [label="b", fontname="TimesNewRoman"];
+    3 -> 3 [label="a", fontname="TimesNewRoman"];
+    3 -> 4 [label="b", fontname="TimesNewRoman"];
+}
